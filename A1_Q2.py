@@ -9,7 +9,7 @@
 #}
 #for i in menu:
 #    print(i,menu[i])
-print("")
+print(" 1 : Addition,\n 2 : Subtraction,\n 3 : Multiplication,\n 4 : Division,\n 5 : Reminder,\n 6 : Quotient,\n 7 : Exponent")
 ch=int(input("Enter Your Choice: "))
 if ch>7 or ch<1:
     print("SORRY:: You enter a wrong Oparator")

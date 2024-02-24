@@ -1,6 +1,8 @@
+#Calculate and print the factorial of n using Python.
+
 n=int(input("Enter the Number:: "))
-for i in 0:
-    result=1
-    result=result*n
-    n=n-1
-print(result)
+result=1
+for i in range(n,0,-1):
+    print(i)   
+    result=result*i
+print(f"The factorial of {num} is {result}")

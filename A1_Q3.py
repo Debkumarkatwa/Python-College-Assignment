@@ -1,3 +1,5 @@
+#Generate and print the first n terms of the Fibonacci series using python.
+
 x=int(input("Enter the range:: "))
 a,b=0,1
 print(f"{a}")

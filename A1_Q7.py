@@ -16,7 +16,7 @@ else :
             check=check+1
             break
 if check==1 :
-    print(f"The number({num}) is a PRIME Number")
+    print(f"\n BUT!! The number({num}) is NOT a PRIME Number.............")
 else :
-    print(f"SORRY!! The number({num}) is NOT a PRIME Number")
+    print(f"\n\nThe number({num}) is a PRIME Number")
         

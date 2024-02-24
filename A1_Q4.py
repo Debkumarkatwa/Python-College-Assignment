@@ -2,7 +2,6 @@
 
 n=int(input("Enter the Number:: "))
 result=1
-for i in range(n,0,-1):
-    print(i)   
+for i in range(n,0,-1):   
     result=result*i
-print(f"The factorial of {num} is {result}")
+print(f"The factorial of {n} is {result}")

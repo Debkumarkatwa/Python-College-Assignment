@@ -12,15 +12,15 @@ elif num<0 :
 else :
     print(f"The number({num}) is a POSITIVE(+) Number")
     if num<=1 :
-        check=check+1      
+        check=check+2      
     else :
         i=2
-        while i*i<=num :
+        while i<=num :
             if num%i==0 :
                 check=check+1
             i=i+1
 
-if check==1 :
+if check>1 :
     print(f"\n BUT!! The number({num}) is NOT a PRIME Number.............")
 else :
     print(f"\n\nThe number({num}) is a PRIME Number")

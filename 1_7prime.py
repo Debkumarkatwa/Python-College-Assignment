@@ -23,5 +23,5 @@ else :
 if check>1 :
     print(f"\n BUT!! The number({num}) is NOT a PRIME Number.............")
 else :
-    print(f"\n\nThe number({num}) is a PRIME Number")
+    print(f"\n\nThe number ({num}) is a PRIME Number")
         

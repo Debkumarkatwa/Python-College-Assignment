@@ -26,9 +26,12 @@ elif choice==1 :
 
     for i in range(size-1,index+1):
         lst[i]=lst[i-1]
-    lst[index]=element
+    lst.insert(index,element)
 
-print("The Elements of the List are:: ")
-for i in range(size):
+else :
+    print("Invalid Choice")
+
+print("\nAfter Modification The Elements of the List are:: ")
+for i in range(size) :
     print(lst[i],end=", ")
 

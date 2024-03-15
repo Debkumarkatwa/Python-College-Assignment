@@ -15,3 +15,19 @@ while j<=num:
     j=j+1
         
 print(f"The Sum of the prime numbers from 0 to ({num}) is a {result}")
+
+num=int(input("Enter a number : "))
+i=2
+s=0
+while i<=num:
+    f=0
+    for j in range(2,i):
+        if i%j==0:
+            f=1
+            break
+    if(f==0):
+        s=s+i
+        print(i,end=" ")
+    i=i+1
+print("\nThe sum of prime number is : ",s)
+

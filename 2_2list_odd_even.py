@@ -15,11 +15,8 @@ for i in range(size):
 
 
 print("The EVEN Elements of the List are:: ")
-for i in even:
-    print(i,end=", ")
-print()
+print(even)
 
 print("The ODD Elements of the List are:: ")
-for i in odd:
-    print(i,end=", ")
+print(odd)
 

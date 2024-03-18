@@ -12,6 +12,15 @@ for i in range(size):
 print()
 
 find=input("Enter the element you want to find: ")
+
+'''
+Finding an element without using a loop-----
+if find in lst:
+    print(found)
+else:
+    print(not found)
+'''
+
 for i in range(size):
     if find==lst[i]:
         print(f"The element was founded in index {i}")

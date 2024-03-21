@@ -14,24 +14,26 @@ print()
 choice=int(input("Are you want to Delete(0) or Insert(1) the element:: "))
 
 if choice==0 :
-    size=size-1
     index=int(input("Which Index's element are you want to delete:: "))
-    for i in range(index,size):
-        lst[i]=lst[i+1]
+    
+    lst.pop(index)
 
 elif choice==1 :
-    size=size+1
     index=int(input("In Which Index you want to Insert the element:: "))
     element=input("Enter the new element: ")
-
-    for i in range(size-1,index+1):
+    
+    ''' using the function of list
+    lst.insert(index,element)
+    '''
+    
+    for i in range(size,index+1):
         lst[i]=lst[i-1]
     lst.insert(index,element)
+    
 
 else :
     print("Invalid Choice")
 
 print("\nAfter Modification The Elements of the List are:: ")
-for i in range(size) :
-    print(lst[i],end=", ")
-
+for i in lst :
+    print(i,end=", ")

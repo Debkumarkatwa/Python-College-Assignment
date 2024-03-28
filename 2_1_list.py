@@ -1,12 +1,10 @@
 lst=[]
-size=int(input("Enter the size of the list:: "))
 
-for i in range(size):
-    element=input(f"Enter the {i+1} element: ")
-    lst.append(element)
-
-
-print("The Elements of the List are:: ")
-for i in range(size):
-    print(lst[i],end=", ")
-print()
+while  True:
+    element=input(f"Enter the {size+1} element: ")
+    if element!= 'q':
+        lst.append((element))
+    else:
+        print("The Elements of the List are:: ")
+        print(lst)
+        break

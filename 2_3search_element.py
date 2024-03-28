@@ -17,9 +17,10 @@ find=input("Enter the element you want to find: ")
 '''
 Finding an element without using a loop-----
 if find in lst:
-    print(found)
+    print("found")
+    print(lst.index(find))
 else:
-    print(not found)
+    print("not found")
 '''
 
 for i in range(size):

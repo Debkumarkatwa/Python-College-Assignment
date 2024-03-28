@@ -1,16 +1,20 @@
 #integers=[]
 odd=[]
 even=[]
-size=int(input("Enter the size of the list:: "))
+i=0
 
-for i in range(size):
-    element=int(input(f"Enter the {i+1} integer: "))
-    if element%2 == 0:
-        even.append(element)
+while True :
+    element=input(f"Enter the {i+1} integer: ")
+    if element=='q':
+        break
+    a=int(element)
+    if a%2 == 0:
+        even.append(a)
 
     else :
-        odd.append(element)
-
+        odd.append(a)
+    
+    i+=1
     #integers.append(element)
 
 

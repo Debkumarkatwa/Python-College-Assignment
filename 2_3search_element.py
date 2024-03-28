@@ -7,8 +7,7 @@ while  True:
         size+=1
     else:
         print("The Elements of the List are:: ")
-        for i in range(size):
-            print(lst[i],end=", ")
+        print(lst)
         print()
         break
 

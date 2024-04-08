@@ -1,15 +1,15 @@
-#tpl=(1,4,2,8,78,52,12,48,75,12,10,88,12)
-lst=[]
-while True:
-    ele=(input("Enter the elements:: "))
-    if ele=='q' :
-        break
-    else:
-        lst.append(int(ele))
+tpl=(1,4,2,8,78,52,12,48,75,12,10,88,12)
+# lst=[]
+# while True:
+#     ele=(input("Enter the elements:: "))
+#     if ele=='q' :
+#         break
+#     else:
+#         lst.append(int(ele))
 
 #tuple
-tpl=tuple(lst)
-print("Tuple is ",tpl)
+# tpl=tuple(lst)
+# print("Tuple is ",tpl)
 
 #len()
 print(f"lenth of the tuple is {len(tpl)}")

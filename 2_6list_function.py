@@ -24,8 +24,8 @@ if c==1:
 
 #pop and remove
 c=int(input("want to delete something(0/1)"))
-p=int(input("you want to delete by index/value(0/1)::"))
 if c==1:
+    p=int(input("want to delete by index(0) or by value(1)"))
     if p==0:
         c=int(input("Enter the index you want to delete::"))
         lst.pop(c)

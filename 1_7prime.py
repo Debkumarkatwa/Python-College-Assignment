@@ -11,17 +11,14 @@ elif num<0 :
 
 else :
     print(f"The number({num}) is a POSITIVE(+) Number")
-    if num<=1 :
-        check=check+2      
-    else :
-        i=2
-        while i<=num :
-            if num%i==0 :
-                check=check+1
-            i=i+1
+    f=0
+    for j in range(2,num):
+        if num%j==0:
+            f=1
+            break
+    if(f==0):
+        print(num,"is a prime number")
+    else:
+        print("Sorry!!",num,"is NOT a prime num")
 
-if check>1 :
-    print(f"\n BUT!! The number({num}) is NOT a PRIME Number.............")
-else :
-    print(f"\n\nThe number ({num}) is a PRIME Number")
         

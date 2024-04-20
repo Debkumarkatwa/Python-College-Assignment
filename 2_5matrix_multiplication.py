@@ -3,40 +3,41 @@ matrix2=[]
 m=[]
 r1=int(input("Enter the number of rows of 1st matrix:"))
 c1=int(input("Enter the number of columns of 1st matrix:"))
-r2=int(input("Enter the number of rows of 2nd matrix:"))
+r2=int(input("\nEnter the number of rows of 2nd matrix:"))
 c2=int(input("Enter the number of columns of 2nd matrix:"))
-if r1!=c2:
+
+if c1!=r2:
     print("Matrix multiplication is not possible")
+
 else:
-    for i in range(c1):
-        for j in range(r1):
-            m.append(input(f"Enter the {i}{j} element of 1st matrix:"))
+    print("\nEnter elements for matrix1..........")
+    for i in range(r1):
+        for j in range(c1):
+            m.append(int(input(f"Enter the {i+1}{j+1} element of 1st matrix:")))
         matrix1.append(list(m))
         m.clear()
-    for i in range(c1):
-        for j in range(r1):
-            m.append(input(f"Enter the {i}{j} element of 1st matrix:"))
-        matrix1.append(list(m))
+    
+    print("\nEnter elements for matrix2..........")
+    for i in range(r2):
+        for j in range(c2):
+            m.append(int(input(f"Enter the {i+1}{j+1} element of 1st matrix:")))
+        matrix2.append(list(m))
         m.clear()
 
-print("1st matrix is")
-for i in range(c1):
-    print(matrix1[i])
-    
-print("2nd matrix is")
-for i in range(c2):
-    print(matrix2[i])
+    print("\n1st matrix is--------")
+    for i in range(c1):
+        print(matrix1[i])
+        
+    print("\n2nd matrix is---------")
+    for i in range(c2):
+        print(matrix2[i])
 
+    result=[[0 for _ in range(c2)] for _ in range(r1)]
 
-
-result=[]
-
-# for i in range(c1):
-#     for j in range(r2):
-#         for k in range(c1):
-#             m.append(matrix1[i][k])*(matrix2[k][j])
-#         result.append(sum(m))
-#         m=[]
-
-# print(result)
-    
+    for i in range(r1):
+        for j in range(c2):
+            for k in range(r2):
+                result[i][j] += matrix1[i][k] * matrix2[k][j]
+    for i in range(c1):
+        print(result[i])
+        

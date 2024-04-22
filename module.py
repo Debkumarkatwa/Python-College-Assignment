@@ -7,7 +7,7 @@ while True:
     marks=0
     x=rd.randint(1,20)
     for i in range(0,5):
-        y=int(input("Guess the number between 1-20: "))
+        y=int(input("\nGuess the number between 1-20: "))
         attem-=1
         if y==x:
             print("You guessed is right")
@@ -25,10 +25,10 @@ while True:
             break
 
         elif y>x:
-            print("Sorry!! you are worng")
+            print("Sorry!! you are wrong")
             print(f"CHOOSE a smaller number......\t you had {attem} attempt left")
         elif y<x:
-            print("Sorry!! you are worng")
+            print("Sorry!! you are wrong")
             print(f"CHOOSE a larger number......\t you had {attem} attempt left")
     else:
         print("Sorry!! You are out of Chance....\nThe correct num is ",x)

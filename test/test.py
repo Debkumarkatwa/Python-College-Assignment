@@ -1,5 +1,4 @@
 lst=[]
-size=0
 
 while(True) :
     print("****************MENU****************")
@@ -19,10 +18,9 @@ while(True) :
     elif choice=='2' :
         find=input("Enter the element you want to find: ")
 
-        for i in range(size):
-            if find==lst[i]:
-                print(f"The element was founded in index {i}")
-                break
+        if find in lst:
+            print(f"The element was founded in index {lst.index(find)}")
+            break
         else :
             print("SORRY!! The element is not in the list........")
             while True:
@@ -40,24 +38,25 @@ while(True) :
                     print("press a correct input\n\n")
 
     elif choice=='3' :
-        element=input("Enter the new element: ")
+        element=input("Enter the new element you want to insert:: ")
 
         lst.append(element)
-        size+=1
         print("Insertion Completed")
         
     elif choice=='4' :
-        index=int(input("Which Index's element are you want to delete:: "))
-        
-        lst.pop(index)
-        print("Deletion Completed")
+        element = input("Enter the element you want to delete: ")
+        if element in lst:
+            lst.remove(element)
+        else:
+            print("The element was not found in the list.")
 
  
     elif choice=='5' :
         print(f"The lenth of the list is {len(lst)}")
         
     elif choice=='6' :
+        print("Exiting the program.")
         break
     
     else :
-        print("Invalid Choice")
+        print("Invalid choice. Please choose a number between 1 and 6.")

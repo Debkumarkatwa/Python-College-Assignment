@@ -32,12 +32,14 @@ else:
     for i in range(c2):
         print(matrix2[i])
 
-    result=[[0 for _ in range(c2)] for _ in range(r1)]
+    result=[[0 for i in range(c2)] for j in range(r1)]
 
     for i in range(r1):
         for j in range(c2):
             for k in range(r2):
                 result[i][j] += matrix1[i][k] * matrix2[k][j]
+
+    print("\n\nResultant matrix is--------")
     for i in range(c1):
         print(result[i])
         

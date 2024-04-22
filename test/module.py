@@ -5,12 +5,12 @@ while True:
     print("\n\n\nWelcome to the game")
     print("You have 5 attempt to guess the number")
     marks=0
-    x=rd.randint(1,20)
+    x=rd.randint(1,25)
     for i in range(0,5):
-        y=int(input("\nGuess the number between 1-20: "))
+        y=int(input("\nGuess the number between 1-25: "))
         attem-=1
         if y==x:
-            print("You guessed is right")
+            print("You guessed the right number")
             if attem==4:
                 marks+=5
             elif attem==3:
@@ -26,10 +26,10 @@ while True:
 
         elif y>x:
             print("Sorry!! you are wrong")
-            print(f"CHOOSE a smaller number......\t you had {attem} attempt left")
+            print(f"Choose a SMALLER number......\t you had {attem} attempt left")
         elif y<x:
             print("Sorry!! you are wrong")
-            print(f"CHOOSE a larger number......\t you had {attem} attempt left")
+            print(f"Choose a LARGER number......\t you had {attem} attempt left")
     else:
         print("Sorry!! You are out of Chance....\nThe correct num is ",x)
         print("\n............Your total score is ",finalscore)

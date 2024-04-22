@@ -18,28 +18,35 @@ def Gcd(a):
                 break
         else:
             return i
-    
-
-while True:
-    result =int(input("Enter 1 to find GCD and 2 to find LCM & 0 for exit: "))
+        
+def createlist():
     lst=[]
     s=0
     while  True:
         element=input(f"Enter the {s+1} element: ")
-        if element!= 'q':
-            lst.append(int(element))
-            s+=1
-        else:
-            print("The Numbers are:: ")
+        if element== 'q':
+            print("The Numbers are:: ",end=" = ")
             print(lst)
             break
+        lst.append(int(element))
+        s+=1
+    return lst
+            
+    
+
+while True:
+    result =int(input("Enter 1 to find GCD and 2 to find LCM & 0 for exit: "))
+
     if result == 1:
+        lst=createlist()
         result = Gcd(lst)
         print(f"The GCD of {lst} is {result}")
     elif result == 2:
+        lst=createlist()
         result = Lcm(lst)
         print(f"The LCM of {lst} is {result}")
     elif result == 0:
+        print("Thank You for Using.....\nExiting the program.....")
         break
     else:
         print("Invalid input. Please enter 1 or 2.")

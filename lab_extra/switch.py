@@ -13,4 +13,4 @@ match x:
     case 5:
         print(a%b)
     case _:
-        print("Invalid input. Please enter 1 or 2.")
+        print("Invalid input. Please enter 1 to 5.")

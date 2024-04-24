@@ -12,7 +12,10 @@ while True:
         attem-=1
         if y==x:
             print("You guessed the right number")
-            if attem==4:
+            if attem>=5:
+                print("Congratulations!! You guessed the number in the first attempt\nYou got BONUS score")
+                marks+=10
+            elif attem==4:
                 marks+=5
             elif attem==3:
                 marks+=4

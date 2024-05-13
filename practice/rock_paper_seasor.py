@@ -1,44 +1,44 @@
 import random as rd
 
-print("Welcome to the game")
+print("\n\nWelcome to the game")
 print("You have to choose between rock, paper and seasor")
-print("Enter 'q' to quit the game")
+print("Enter 'quit / 0' to exit the game")
 
 score,game=0,0
 
 while True:
     com=rd.choice(["rock","paper","seasor"]) #computer's choice
-    user=input("Enter your choice: ").lower()   
-    if user=="q":
+    user=input("\nEnter your choice:: ").lower()   
+    if user=="quit" or user=="0":
         break
 
     if user==com:
-        print("It's a tie")
+        print("\nIt's a tie")
         game-=1
 
-    elif user=="rock":
+    elif user=="rock" or "1":
         if com=="paper":
-            print("You lose")
+            print("\nYou lose")
         else:
-            print("You win")
+            print("\nYou win")
             score+=1
 
-    elif user=="paper":
+    elif user=="paper" or "2":
         if com=="seasor":
-            print("You lose")
+            print("\nYou lose")
         else:
-            print("You win")
+            print("\nYou win")
             score+=1
 
-    elif user=="seasor":
+    elif user=="seasor" or "3":
         if com=="rock":
-            print("You lose")
+            print("\nYou lose")
         else:
-            print("You win")
+            print("\nYou win")
             score+=1
 
     else:
-        print("Invalid choice")
+        print("\nInvalid choice")
         continue
 
     print(f"Computer's choice is {com}")       

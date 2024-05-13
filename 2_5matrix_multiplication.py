@@ -25,11 +25,11 @@ else:
         m.clear()
 
     print("\n1st matrix is--------")
-    for i in range(c1):
+    for i in range(r1):
         print(matrix1[i])
         
     print("\n2nd matrix is---------")
-    for i in range(c2):
+    for i in range(r2):
         print(matrix2[i])
 
     result=[[0 for i in range(c2)] for j in range(r1)]
@@ -40,6 +40,6 @@ else:
                 result[i][j] += matrix1[i][k] * matrix2[k][j]
 
     print("\n\nResultant matrix is--------")
-    for i in range(c1):
+    for i in range(r1):
         print(result[i])
         

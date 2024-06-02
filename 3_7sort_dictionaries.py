@@ -1,11 +1,15 @@
-# Create a dictionary
-my_dict = {'apple': 10, 'banana': 20, 'orange': 30}
+d = {
+    "five": 5,
+    "one": 1,
+    "two": 2,
+    "seven": 7,
+    "four": 4,
+    "eight": 8,
+    "six": 6,
+    "three": 3
+}
+def sort_dict(a):
+    return a[1]
 
-# Print the original dictionary
-print("Original Dictionary:", my_dict)
-
-# Change the value of a specific item
-my_dict['banana'] = 25
-
-# Print the updated dictionary
-print("Updated Dictionary:", my_dict)
+new_d=sorted(d.items(), key=sort_dict)
+print(new_d)

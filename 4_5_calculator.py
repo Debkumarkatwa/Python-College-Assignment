@@ -1,12 +1,12 @@
 from tkinter import *
 
 win = Tk() 
-win.geometry("312x330")  
-win.resizable(0, 0)  
+win.geometry("312x380")  
+# win.resizable(0, 0)  
 win.title("Calculator")
 
 # function for input button
-def btn_click(item,text=None):
+def btn_click(item):
     global expression
     expression = expression + str(item)
     it.set(expression)
@@ -20,9 +20,56 @@ def bt_clear():
 # to calculate the expression 
 def bt_equal():
     global expression
-    result = str(eval(expression))
-    it.set(result)
-    expression = result
+    try:
+        result = str(eval(expression))
+    except:
+        it.set("Invalid Syntax")
+        expression = ""
+        return
+    else:
+        it.set(result)
+        expression = result
+
+def switch():
+    global a
+    if a==1:
+        a=0
+        one.button.configure(state="active")
+        two.button.configure(state="active")
+        three.button.configure(state="active")
+        four.button.configure(state="active")
+        five.button.configure(state="active")
+        six.button.configure(state="active")
+        seven.button.configure(state="active")
+        eight.button.configure(state="active")
+        nine.button.configure(state="active")
+        zero.button.configure(state="active")
+        point.button.configure(state="active")
+        clear.button.configure(state="active")
+        plus.button.configure(state="active")
+        minus.button.configure(state="active")
+        multiply.button.configure(state="active")
+        divide.button.configure(state="active")
+        equal.button.configure(state="active")
+    elif a==0:
+        a=1
+        one.button.configure(state="disabled")
+        two.button.configure(state="disabled")
+        three.button.configure(state="disabled")
+        four.button.configure(state="disabled")
+        five.button.configure(state="disabled")
+        six.button.configure(state="disabled")
+        seven.button.configure(state="disabled")
+        eight.button.configure(state="disabled")
+        nine.button.configure(state="disabled")
+        zero.button.configure(state="disabled")
+        point.button.configure(state="disabled")
+        clear.button.configure(state="disabled")
+        plus.button.configure(state="disabled")
+        minus.button.configure(state="disabled")
+        multiply.button.configure(state="disabled")
+        divide.button.configure(state="disabled")
+        equal.button.configure(state="disabled")
 
 class button:
     
@@ -30,7 +77,7 @@ class button:
         self.text = text
         self.row = row
         self.column = column
-        self.button = Button(btns_frame, text = self.text, fg = "black", width = 10, height = 3, bd = 0, bg = "white", cursor = "hand2", command = lambda: btn_click(self.text))
+        self.button = Button(btns_frame, text = self.text, fg = "black", width = 10, height = 3, bd = 0,state="disabled", bg = "white", cursor = "hand2", command = lambda: btn_click(self.text))
         self.button.grid(row = self.row, column = self.column, padx = 1, pady = 1)
 
 expression = ""
@@ -49,6 +96,7 @@ input_field = Entry(input_frame, font=('arial', 18, 'bold'), textvariable=it, wi
 btns_frame = Frame(win, bg="red")
 btns_frame.pack()
 
+global one,two,three,four,five,six,seven,eight,nine,zero,point,clear,plus,minus,multiply,divide,equal
 one=button(1,0,0)
 two=button(2,0,1)
 three=button(3,0,2)
@@ -69,5 +117,11 @@ divide=button("/",3,3)
 equal=button("=",4,0)
 equal.button.configure(command=bt_equal,width=44)
 equal.button.grid(row=4,column=0,columnspan=4)
+global a
+a=1
+bt=button("switch",5,0)
+bt.button.grid(row=5,column=0,columnspan=4)
+bt.button.configure(command=lambda:switch())
+bt.button.configure(state="active")
 
 win.mainloop()
